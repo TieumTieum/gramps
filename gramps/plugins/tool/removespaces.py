@@ -210,8 +210,12 @@ class RemoveSpaces(ManagedWindow):
             plat = place.get_latitude()
             if plat != plat.strip():
                 found = True
+            if plat.find(',') != -1:
+                found = True
             plon = place.get_longitude()
             if plon != plon.strip():
+                found = True
+            if plon.find(',') != -1:
                 found = True
             if found:
                 value = (place_handle, pname, plat, plon)
