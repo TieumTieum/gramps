@@ -1479,7 +1479,7 @@ class NavWebReport(Report):
         """
         if self.usecms:
             to_dir = "/" + self.target_uri + "/" + to_dir
-        LOG.debug("copying '%s' to '%s/%s'" % (from_fname, to_dir, to_fname))
+        LOG.debug("copying '%s' to '%s/%s'", from_fname, to_dir, to_fname)
         mtime = os.stat(from_fname).st_mtime
         if self.archive:
             def set_mtime(tarinfo):
